@@ -51,6 +51,7 @@
     chmod 400 ~/myteam
 
 12- Using the command Line 
+
 • Change the permissions of oldpasswd file to give owner read and write permissions and for group write and execute and execute only for the others: 
 
     sudo chmod u=rw,g=wx,o=x oldpasswd
