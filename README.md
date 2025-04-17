@@ -50,7 +50,16 @@
     mkdir ~/myteam
     chmod 400 ~/myteam
 
-12- 
+12- Using the command Line 
+• Change the permissions of oldpasswd file to give owner read and write permissions and for group write and execute and execute only for the others: 
+
+    sudo chmod u=rw,g=wx,o=x oldpasswd
+    sudo chmod 631 oldpasswd
+    
+• Change your default permissions to be as above : 
+
+    
+• What is the maximum permission a file can have, by default when it is just created? And what is that for directory. 666 read write not excute. (file) 777 read write and excute (Dir) • Change your default permissions to be no permission to everyone then create a directory and a file to verify
 
 
 
