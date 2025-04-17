@@ -21,6 +21,36 @@
 
     sudo groupadd badgroup
 
+5- Add islam user to the pgroup group as a supplementary group : 
+
+    sudo usermod -aG pgroup Taghreed
+
+6- Modify the password of islam's account to password : 
+
+    sudo passwd Taghreed
+
+7- Modify islam's account so the password expires after 30 days : 
+
+    sudo chage -M 30 Taghreed
+
+8- Lock bad user account so he can't log in : 
+
+    sudo passwd -l baduser
+
+9- Delete bad user account : 
+
+    sudo userdel -rf baduser
+
+10- Delete the supplementary group called badgroup : 
+
+    sudo groupdel badgroup
+
+11- Create a folder called myteam in your home directory and change its permissions to read only for the owner :
+
+    mkdir ~/myteam
+    chmod 400 ~/myteam
+
+12- 
 
 
 
