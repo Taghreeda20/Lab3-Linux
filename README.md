@@ -66,7 +66,7 @@
     ls -l testfile
     ls -ld testdir
     
-• What is the maximum permission a file can have, by default when it is just created? And what is that for directory? 666 for files (read & write not excute ) And 777 for directories ( read write and excute) 
+• What is the maximum permission a file can have, by default when it is just created? And what is that for directory? 666 for files (read & write not excute ) And 777 for directories ( read write and excute) .
 
 • Change your default permissions to be no permission to everyone then create a directory and a file to verify : 
 
@@ -75,6 +75,25 @@
      mkdir dir25
      ls -l file25
      ls -ld dir25
+
+ 13- Starting from your home directory, find all files that were modified in the last two day : 
+
+     sudo find ~ -type f -mtime -2
+
+ 14- Starting from /etc, find files owned by root user : 
+
+    sudo find /etc -type f -user root
+
+ 15- Find all directories in your home directory : 
+
+     sudo find ~ -type d
+
+ 16- Write a command to search for all files on the system that, its name is ".profile" : 
+
+      sudo find / -name .profile
+
+  17- Identify the file types of the following: /etc/passwd, /dev/pts/0, /etc, /dev/sda : 
+
 
 
 
