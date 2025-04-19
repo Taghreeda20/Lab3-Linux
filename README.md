@@ -118,9 +118,10 @@
 
     sudo ln -s /etc/passwd /boot/passwd_symlink
 
-21-Create a hard link of /etc/passwd in /boot : 
+21-Create a hard link of /etc/passwd in /boot . Could you? Why?
 
     sudo ln /etc/passwd /boot/passwd_hardlink 
+No,because hard links require the source (/etc/passwd) and destination (/boot) to be on the same filesystem.and /etc and /boot are typically on separate filesystems
 
 
 
