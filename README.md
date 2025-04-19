@@ -59,8 +59,23 @@
     
 • Change your default permissions to be as above : 
 
+    umask 026
+    echo "umask 026" >> ~/.bashrc
+    touch testfile
+    mkdir testdir
+    ls -l testfile
+    ls -ld testdir
     
-• What is the maximum permission a file can have, by default when it is just created? And what is that for directory. 666 read write not excute. (file) 777 read write and excute (Dir) • Change your default permissions to be no permission to everyone then create a directory and a file to verify
+• What is the maximum permission a file can have, by default when it is just created? And what is that for directory? 666 for files (read & write not excute ) And 777 for directories ( read write and excute) 
+
+• Change your default permissions to be no permission to everyone then create a directory and a file to verify : 
+
+     umask 777
+     touch file25
+     mkdir dir25
+     ls -l file25
+     ls -ld dir25
+
 
 
 
