@@ -74,11 +74,11 @@
      touch file25
      mkdir dir25
      ls -l file25
-     ls -ld dir25
+     s -ld dir25
 
  13- Starting from your home directory, find all files that were modified in the last two day : 
 
-     sudo find ~ -type f -mtime -2
+    sudo find ~ -type f -mtime -2
 
  14- Starting from /etc, find files owned by root user : 
 
@@ -86,13 +86,43 @@
 
  15- Find all directories in your home directory : 
 
-     sudo find ~ -type d
+    sudo find ~ -type d
 
  16- Write a command to search for all files on the system that, its name is ".profile" : 
 
-      sudo find / -name .profile
+    sudo find / -name .profile
 
   17- Identify the file types of the following: /etc/passwd, /dev/pts/0, /etc, /dev/sda : 
+
+    file /etc/passwd
+    file /dev/pts/0
+    file /etc
+    file /dev/sda
+
+18- List the inode numbers of /, /etc, /etc/hosts  : 
+
+    ls -i /
+    ls -i /etc
+    ls -i /etc/hosts
+
+19- Copy /etc/passwd to your home directory, use the commands diff and cmp, and Edit in the file you copied, and then use these commands again, and check the output : 
+
+    cp /etc/passwd ~/passwd_copy
+    diff /etc/passwd ~/passwd_copy
+    cmp  /etc/passwd ~/passwd_copy
+    nano ~/passwd_copy      # I add a comment to show the edit 
+    diff /etc/passwd ~/passwd_copy
+    cmp  /etc/passwd ~/passwd_copy
+
+20- Create a symbolic link of /etc/passwd in /boot : 
+
+    sudo ln -s /etc/passwd /boot/passwd_symlink
+
+21-Create a hard link of /etc/passwd in /boot : 
+
+    sudo ln /etc/passwd /boot/passwd_hardlink 
+
+
 
 
 
